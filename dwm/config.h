@@ -57,17 +57,17 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[]  = { "tabbed", "-c", "/home/elleven/code/dotfiles/scripts/st_start_wininfo.sh", NULL };
+static const char *termcmd[]  = { "tabbed", "-c", "/home/avi/dotfiles/scripts/st_start_wininfo.sh", NULL };
 static const char *dmenurun[]  = { "j4-dmenu-desktop", "--term", "st", NULL };
-static const char *browser[]  = { "librewolf", NULL };
+static const char *browser[]  = { "chromium", NULL };
 static const char *filemanager[]  = { "st", "lf", NULL };
 static const char *calendar[]  = { "gsimplecal", NULL };
 static const char *audioctl[]  = { "pavucontrol", NULL };
 
 // brightness keybinds
 static const char *brightness[2][4] = {
-  {"goblight", "+10", NULL},
-  {"goblight", "-10", NULL}};
+  {"goblight", "+1000", NULL},
+  {"goblight", "-1000", NULL}};
 
 
 static Key keys[] = {
@@ -105,9 +105,9 @@ static Key keys[] = {
   {0,       XF86XK_MonBrightnessUp, spawn,                   {.v=brightness[0]} },
   {0,       XF86XK_MonBrightnessDown, spawn,                 {.v=brightness[1]} },
   {0,       XF86XK_AudioRaiseVolume, spawn,                  
-    SHCMD("/home/elleven/code/dotfiles/scripts/change_volume.sh 5%+") },
+    SHCMD("/home/avi/dotfiles/scripts/change_volume.sh 5%+") },
   {0,       XF86XK_AudioLowerVolume, spawn,                  
-    SHCMD("/home/elleven/code/dotfiles/scripts/change_volume.sh 5%-") },
+    SHCMD("/home/avi/dotfiles/scripts/change_volume.sh 5%-") },
 //  {0,       XF86XK_AudioMute,        spawn,                  
 //    SHCMD("/home/elleven/code/dotfiles/scripts/change_volume.sh toggle") },
 	TAGKEYS(                        XK_1,                      0)
